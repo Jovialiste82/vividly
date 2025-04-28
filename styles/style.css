@@ -12,6 +12,7 @@
   --darkgrey: #252525;
   --orange: #ffae00;
   --darkorange: #ff7800;
+  --red: #ff0000;
   --black: #000;
   --white: #fff;
   --grey: #c1c1c1;
@@ -76,10 +77,20 @@ a {
 }
 
 /* ******************************************** */
+/* ******************************************** */
+/* ******************************************** */
+/* ******************************************** */
+/* ******************************************** */
+/* *********** Utilities ************************/
 
 /* Container */
 .container {
   max-width: 1440px;
+}
+
+/* Margin Auto */
+.margin-auto {
+  margin: auto;
 }
 
 /* Buttons */
@@ -102,7 +113,36 @@ a {
   transform: scale(1.05);
 }
 
+.orange-bt {
+  border-top: 2px solid var(--darkorange);
+}
+
+.fancy-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.fancy-checkbox .checkbox-icon::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  content: "\f164";
+  font-size: 24px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* When the checkbox is hovered or checked */
+.fancy-checkbox input[type="checkbox"]:hover ~ .checkbox-icon::before,
+.fancy-checkbox input[type="checkbox"]:checked ~ .checkbox-icon::before {
+  font-weight: 900;
+  content: "\f164";
+}
+
 /* ******************************************** */
+/* ******************************************** */
+/* ******************************************** */
+/* ******************************************** */
+/* ******************************************** */
+/* Main page */
 
 /* Loading Cover */
 .spinner-background {
@@ -148,16 +188,12 @@ a {
 
 /* Background fade */
 @keyframes backgroundFade {
-  /* from {
-    display: block;
-  } */
   to {
     visibility: hidden;
   }
 }
 
 /* ******************************************** */
-
 /* header */
 
 header {
@@ -167,20 +203,35 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .list-style-type {
+    display: none;
+  }
+
+  #mobile-nav {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  #desktop-nav {
+    display: none;
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      li {
+      }
+    }
+  }
 }
 
-#mobile-nav {
-  position: absolute;
-  right: 20px;
-  top: 30px;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-#desktop-nav {
-  display: none;
-}
-
+/* ******************************************** */
 /* Main */
 
 #find-a-professional {
@@ -377,28 +428,6 @@ header {
           bottom: 10px;
           right: 10px;
         }
-
-        .fancy-checkbox input[type="checkbox"] {
-          display: none;
-        }
-
-        .fancy-checkbox .checkbox-icon::before {
-          font-family: "Font Awesome 6 Free";
-          font-weight: 400;
-          content: "\f164";
-          font-size: 24px;
-          cursor: pointer;
-          display: inline-block;
-        }
-
-        /* When the checkbox is hovered or checked */
-        .fancy-checkbox input[type="checkbox"]:hover ~ .checkbox-icon::before,
-        .fancy-checkbox
-          input[type="checkbox"]:checked
-          ~ .checkbox-icon::before {
-          font-weight: 900;
-          content: "\f164";
-        }
       }
     }
   }
@@ -422,6 +451,7 @@ header {
   }
 }
 
+/* ******************************************** */
 /* Footer */
 
 footer {
@@ -455,6 +485,40 @@ footer {
   }
 }
 
+/* ******************************************** */
+/* ******************************************** */
+/* ******************************************** */
+/* ******************************************** */
+/* ******************************************** */
+/* Presentation Page */
+
+#hero-picture-section {
+  /* margin: auto; */
+
+  .hero-img {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
+
+#who-are-we-section {
+  margin-top: 80px;
+}
+#where-are-we-section {
+  margin-top: 80px;
+}
+#contact-us-section {
+  margin-top: 80px;
+}
+
+/* ******************************************** */
+/* ******************************************** */
+/* ******************************************** */
+/* ******************************************** */
+/* ******************************************** */
 /* ---------------------------------------- */
 /* -------------- Responsive -------------- */
 /* ------------  Mobile First ------------- */
@@ -486,6 +550,26 @@ footer {
 /* Format Desktop */
 
 @media screen and (min-width: 1024px) {
+  header {
+    position: relative;
+    #mobile-nav {
+      display: none;
+    }
+
+    #desktop-nav {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      display: flex;
+      ul {
+        display: flex;
+
+        li {
+          list-items: non;
+        }
+      }
+    }
+  }
   footer {
     flex-direction: row;
     justify-content: center;
@@ -514,3 +598,6 @@ footer {
     }
   }
 }
+
+/* ******************************************** */
+/* Presentation Page */

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
     <title>Vividly</title>
     <script
       src="https://kit.fontawesome.com/79c0143221.js"
@@ -12,79 +12,133 @@
   </head>
   <body>
     <!-- Header -->
+
     <header>
       <a href="/index.html">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
-
-      <a href="/index.html" class="header-logo">
-        <h1>Vividly</h1>
-      </a>
-      <nav id="mobile-nav">
-        <div class="hamburger-icon">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-      </nav>
-      <nav id="desktop-nav">
-        <ul>
-          <li>
-            <a href="">Home</a>
-          </li>
-          <li>
-            <a href="#">Find a professional</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="container">
+        <a href="/" class="header-logo">
+          <h1>Vividly</h1>
+        </a>
+        <nav id="mobile-nav">
+          <div class="hamburger-icon">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+        <nav id="desktop-nav">
+          <ul>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="#">Find a professional</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Main -->
     <main>
-      <section class="hero-section">
-        <div class="hero-img">
-          <img src="/img/constructeur1.jpg" alt="" />
+      <!-- hero-picture-section -->
+      <section id="hero-picture-section">
+        <div class="container margin-auto">
+          <div class="hero-img">
+            <img src="/img/constructeur1.jpg" alt="" />
+          </div>
+          <h2>Smith & Sons Construction Co.</h2>
+          <form class="recommendation-form">
+            <p>Recommend this professional</p>
+            <label class="fancy-checkbox" for="eee">
+              <input
+                type="checkbox"
+                id="eee"
+                name="recommend"
+                aria-label="Recommend professional"
+              />
+              <span class="checkbox-icon"></span>
+            </label>
+          </form>
         </div>
-        <h2>Smith & Sons Construction Co.</h2>
-        <form action="">
-          <p>Recommend this professional</p>
-          <i class="fa-regular fa-thumbs-up"></i>
-        </form>
       </section>
-      <section class="presentation-section">
-        <h2>Who are we</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectur adipisicing elit. Sunt
-          consectetur voluptatum eligendi, nisi sapiente maxime saepe! Ut eius
-          possimus voluptatum illo, velit sapiente quia tempora aliquam ea,
-          omnis iste similique.
-        </p>
+      <!-- who-are-we-section -->
+      <section id="who-are-we-section">
+        <div class="container margin-auto orange-bt">
+          <h2>Who are we</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectur adipisicing elit. Sunt
+            consectetur voluptatum eligendi, nisi sapiente maxime saepe! Ut eius
+            possimus voluptatum illo, velit sapiente quia tempora aliquam ea,
+            omnis iste similique.
+          </p>
+        </div>
       </section>
-      <section class="map-section">
-        <h2>Where to find us</h2>
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9609.78486844323!2d2.305943387158207!3d48.8662472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2d7077bbbf%3A0x21bc8daa496f2ba!2sSmith%20%26%20Son!5e1!3m2!1sfr!2sfr!4v1745333451876!5m2!1sfr!2sfr"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+      <!-- where-are-we-section -->
+      <section id="where-are-we-section">
+        <div class="container margin-auto orange-bt">
+          <h2>Where to find us</h2>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1328.8603994632085!2d5.3677422925829905!3d43.304712659324615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1slaplateforme%20marseille!5e1!3m2!1sfr!2sfr!4v1745846526088!5m2!1sfr!2sfr"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section id="contact-us-section">
+        <div class="container margin-auto orange-bt">
+          <h2>Contact us</h2>
+          <div class="contact-options">
+            <div class="phone">Call us now!</div>
+            <div class="mail">Send us an email</div>
+          </div>
+          <h3>Follow us</h3>
+          <div class="social-media"></div>
+          <form action="">
+            <input type="text" />
+            <input type="email" />
+            <input type="tel" />
+            <input type="text" />
+            <input type="checkbox" />I accept the politic of confidentiality
+            <button class="cta-button">Send</button>
+          </form>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
     <footer>
-      <h2>Vividly</h2>
-      <div class="footer-links-group">
-        <a>Suggest a professional</a>
-        <a>Become partner</a>
-        <a>Legal notice</a>
-        <a>Contact</a>
+      <div class="container">
+        <nav>
+          <ul>
+            <li>
+              <a href="/">
+                <h2>Foody</h2>
+              </a>
+            </li>
+            <li>
+              <a>Suggest a restaurant</a>
+            </li>
+            <li>
+              <a>To become partner</a>
+            </li>
+            <li>
+              <a>Legal notice</a>
+            </li>
+            <li>
+              <a>Contact</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </footer>
   </body>
